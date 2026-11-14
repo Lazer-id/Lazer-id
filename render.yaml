@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: lazer-id-whatsapp-bot
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_VERSION
+        value: 20
+      - key: DASHBOARD_USER
+        value: admin
+      - key: DASHBOARD_PASSWORD
+        generateValue: true
+      - key: BOT_NAME
+        value: Lazer.id
